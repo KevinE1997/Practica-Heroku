@@ -1,8 +1,11 @@
-FROM python:3.10-slim
+FROM python:3.9-slim
 
-WORKDIR  C:\Users\fing.labcom\Desktop\Practica - Heroku
+WORKDIR /app
 
-COPY  . . 
+COPY proyecto_Python.py .
 
-CMD [ "python","Hola_Mundo_Heroku.py" ]
+RUN pip install --no-cache-dir -r requeriments.txt
 
+EXPOSE 5000
+
+CMD ["python", "proyecto_Python.py"]
