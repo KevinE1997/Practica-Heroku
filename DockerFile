@@ -2,9 +2,9 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY proyecto_Python.py .
+COPY Hola_Mundo_Heroku.py .
 
-RUN pip install --no-cache-dir -r requeriments.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
